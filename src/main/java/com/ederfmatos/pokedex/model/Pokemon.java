@@ -21,12 +21,13 @@ public class Pokemon {
 
     private int numero;
     private String nome;
-    private List<String> tipo;
+    private List<Integer> tipo;
     private List<String> habilidades;
     private double peso;
+    private String imagem;
 
-    public Pokemon(int numero, String nome, String tipo, String habilidade, double peso) {
-        this(null, numero, nome, List.of(tipo), List.of(habilidade), peso);
+    public Pokemon(int numero, String nome, Integer tipo, String habilidade, double peso, String imagem) {
+        this(null, numero, nome, List.of(tipo), List.of(habilidade), peso, imagem);
     }
 
 }
