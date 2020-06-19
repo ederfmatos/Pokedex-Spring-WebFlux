@@ -8,6 +8,8 @@ import org.springframework.web.bind.annotation.*;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
+import java.util.Comparator;
+
 @RestController("pokemon")
 @RequestMapping("/pokemons")
 public class PokemonController {
@@ -18,7 +20,7 @@ public class PokemonController {
     @GetMapping
     @ResponseStatus(HttpStatus.OK)
     public Flux<Pokemon> findAll() {
-        return pokemonService.findAll();
+        return pokemonService.findAll().sort(Comparator.comparingInt(Pokemon::getNumero));
     }
 
     @GetMapping("/{id}")
