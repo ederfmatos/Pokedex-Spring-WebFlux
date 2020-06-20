@@ -18,12 +18,11 @@ public class Pokemon {
     private List<String> skills;
     private double weight;
     private String image;
-    private boolean active = true;
 
     public Pokemon() {
     }
 
-    public Pokemon(String id, int number, String name, List<Integer> types, List<String> skills, double weight, String image, boolean active) {
+    public Pokemon(String id, int number, String name, List<Integer> types, List<String> skills, double weight, String image) {
         this.id = id;
         this.number = number;
         this.name = name;
@@ -31,11 +30,10 @@ public class Pokemon {
         this.skills = skills;
         this.weight = weight;
         this.image = image;
-        this.active = active;
     }
 
     public Pokemon(int number, String name, Integer type, String skill, double weight, String image) {
-        this(null, number, name, List.of(type), List.of(skill), weight, image, true);
+        this(null, number, name, List.of(type), List.of(skill), weight, image);
     }
 
     public String getId() {
@@ -92,14 +90,6 @@ public class Pokemon {
 
     public void setImage(String image) {
         this.image = image;
-    }
-
-    public boolean isActive() {
-        return active;
-    }
-
-    public void setActive(boolean active) {
-        this.active = active;
     }
 
     @Override
