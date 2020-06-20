@@ -92,4 +92,17 @@ public class Pokemon {
         this.image = image;
     }
 
+    @Override
+    public String toString() {
+        return "Pokemon{" +
+                "id='" + id + '\'' +
+                ", numero=" + numero +
+                ", nome='" + nome + '\'' +
+                ", tipo=" + tipo +
+                ", habilidades=" + habilidades +
+                ", peso=" + peso +
+                ", imagem='" + imagem + '\'' +
+                '}';
+    }
+
 }

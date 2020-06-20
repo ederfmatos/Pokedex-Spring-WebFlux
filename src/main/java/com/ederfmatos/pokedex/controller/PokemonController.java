@@ -12,6 +12,8 @@ import org.springframework.web.bind.annotation.*;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
+import java.util.Comparator;
+
 @RestController("pokemon")
 @RequestMapping("/pokemons")
 @Api(tags = "Pokemons")
@@ -28,7 +30,7 @@ public class PokemonController {
     })
     @ApiOperation("List of pokemons")
     public Flux<Pokemon> findAll() {
-        return pokemonService.findAll();
+        return pokemonService.findAll().sort(Comparator.comparingInt(Pokemon::getNumero));
     }
 
     @GetMapping("/{id}")
