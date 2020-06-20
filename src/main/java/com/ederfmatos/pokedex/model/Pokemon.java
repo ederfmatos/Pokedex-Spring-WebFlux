@@ -19,6 +19,8 @@ public class Pokemon {
     private double weight;
     private String image;
 
+    private boolean test;
+
     public Pokemon() {
     }
 
@@ -90,6 +92,14 @@ public class Pokemon {
 
     public void setImage(String image) {
         this.image = image;
+    }
+
+    public boolean isTest() {
+        return test;
+    }
+
+    public void setTest(boolean test) {
+        this.test = test;
     }
 
     @Override
