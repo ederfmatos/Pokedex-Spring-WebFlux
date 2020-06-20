@@ -94,6 +94,14 @@ public class Pokemon {
         this.image = image;
     }
 
+    public boolean isActive() {
+        return active;
+    }
+
+    public void setActive(boolean active) {
+        this.active = active;
+    }
+
     @Override
     public String toString() {
         return "Pokemon{" +
