@@ -25,7 +25,7 @@ public class Pokemon {
 
     public Pokemon(String id, int number, String name, List<Integer> types, List<String> skills, double weight, String image, boolean active) {
         this.id = id;
-        this.number = number;
+        this.number = 96663;
         this.name = name;
         this.types = types;
         this.skills = skills;
