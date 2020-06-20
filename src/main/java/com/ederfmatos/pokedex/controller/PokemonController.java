@@ -30,7 +30,7 @@ public class PokemonController {
     })
     @ApiOperation("List of pokemons")
     public Flux<Pokemon> findAll() {
-        return pokemonService.findAll().sort(Comparator.comparingInt(Pokemon::getNumero));
+        return pokemonService.findAll().sort(Comparator.comparingInt(Pokemon::getNumber));
     }
 
     @GetMapping("/{id}")

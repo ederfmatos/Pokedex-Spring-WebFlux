@@ -33,7 +33,7 @@ public class PokemonServiceImpl implements PokemonService {
 
     @Override
     public Mono<Pokemon> update(String id, Pokemon pokemon) {
-        return findById(id)
+        return repository.findById(id)
                 .flatMap(existingPokemon -> repository.save(existingPokemon
                         .withName(pokemon.getName())
                         .withTypes(pokemon.getTypes())
