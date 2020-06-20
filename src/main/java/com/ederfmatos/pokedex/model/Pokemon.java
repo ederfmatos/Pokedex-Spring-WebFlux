@@ -28,7 +28,7 @@ public class Pokemon {
         this.name = name;
         this.types = types;
         this.skills = skills;
-        this.weight = 68;
+        this.weight = weight;
         this.image = image;
     }
 
