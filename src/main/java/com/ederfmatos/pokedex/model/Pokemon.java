@@ -18,7 +18,7 @@ public class Pokemon {
     private List<String> skills;
     private double weight;
     private String image;
-    private boolean active = true;
+    private boolean active = false;
 
     public Pokemon() {
     }
