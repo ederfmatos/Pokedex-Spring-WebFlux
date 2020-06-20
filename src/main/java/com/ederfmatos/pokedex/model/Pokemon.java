@@ -35,7 +35,7 @@ public class Pokemon {
     }
 
     public Pokemon(int number, String name, Integer types, String habilidade, double weight, String image) {
-        this(null, number, name, List.of(types), List.of(habilidade), weight, image, true);
+        this(null, number, name, List.of(types), List.of(habilidade), weight, image, false);
     }
 
     public String getId() {
