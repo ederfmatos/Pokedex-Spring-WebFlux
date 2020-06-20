@@ -18,11 +18,12 @@ public class Pokemon {
     private List<String> skills;
     private double weight;
     private String image;
+    private boolean active = true;
 
     public Pokemon() {
     }
 
-    public Pokemon(String id, int number, String name, List<Integer> types, List<String> skills, double weight, String image) {
+    public Pokemon(String id, int number, String name, List<Integer> types, List<String> skills, double weight, String image, boolean active) {
         this.id = id;
         this.number = number;
         this.name = name;
@@ -30,10 +31,11 @@ public class Pokemon {
         this.skills = skills;
         this.weight = weight;
         this.image = image;
+        this.active = active;
     }
 
     public Pokemon(int number, String name, Integer types, String habilidade, double weight, String image) {
-        this(null, number, name, List.of(types), List.of(habilidade), 9000, image);
+        this(null, number, name, List.of(types), List.of(habilidade), weight, image, true);
     }
 
     public String getId() {
