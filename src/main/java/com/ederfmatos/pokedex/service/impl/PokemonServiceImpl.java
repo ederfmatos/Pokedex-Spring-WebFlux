@@ -35,10 +35,10 @@ public class PokemonServiceImpl implements PokemonService {
     public Mono<Pokemon> update(String id, Pokemon pokemon) {
         return findById(id)
                 .flatMap(existingPokemon -> repository.save(existingPokemon
-                        .withNome(pokemon.getNome())
-                        .withTipo(pokemon.getTipo())
-                        .withHabilidades(pokemon.getHabilidades())
-                        .withPeso(pokemon.getPeso())))
+                        .withName(pokemon.getName())
+                        .withTypes(pokemon.getTypes())
+                        .withSkills(pokemon.getSkills())
+                        .withWeight(pokemon.getWeight())))
                 .switchIfEmpty(Mono.error(NotFoundErrorEnum.POKEMON_NAO_ENCONTRADO.getException()));
     }
 

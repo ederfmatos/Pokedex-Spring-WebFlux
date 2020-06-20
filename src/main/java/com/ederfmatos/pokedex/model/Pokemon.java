@@ -12,28 +12,28 @@ public class Pokemon {
 
     @Id
     private String id;
-    private int numero;
-    private String nome;
-    private List<Integer> tipo;
-    private List<String> habilidades;
-    private double peso;
-    private String imagem;
+    private int number;
+    private String name;
+    private List<Integer> types;
+    private List<String> skills;
+    private double weight;
+    private String image;
 
     public Pokemon() {
     }
 
-    public Pokemon(String id, int numero, String nome, List<Integer> tipo, List<String> habilidades, double peso, String imagem) {
+    public Pokemon(String id, int number, String name, List<Integer> types, List<String> skills, double weight, String image) {
         this.id = id;
-        this.numero = numero;
-        this.nome = nome;
-        this.tipo = tipo;
-        this.habilidades = habilidades;
-        this.peso = peso;
-        this.imagem = imagem;
+        this.number = number;
+        this.name = name;
+        this.types = types;
+        this.skills = skills;
+        this.weight = weight;
+        this.image = image;
     }
 
-    public Pokemon(int numero, String nome, Integer tipo, String habilidade, double peso, String imagem) {
-        this(null, numero, nome, List.of(tipo), List.of(habilidade), peso, imagem);
+    public Pokemon(int number, String name, Integer types, String habilidade, double weight, String image) {
+        this(null, number, name, List.of(types), List.of(habilidade), weight, image);
     }
 
     public String getId() {
@@ -44,52 +44,52 @@ public class Pokemon {
         this.id = id;
     }
 
-    public int getNumero() {
-        return numero;
+    public int getNumber() {
+        return number;
     }
 
-    public void setNumero(int numero) {
-        this.numero = numero;
+    public void setNumber(int number) {
+        this.number = number;
     }
 
-    public String getNome() {
-        return nome;
+    public String getName() {
+        return name;
     }
 
-    public void setNome(String nome) {
-        this.nome = nome;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public List<Integer> getTipo() {
-        return tipo;
+    public List<Integer> getTypes() {
+        return types;
     }
 
-    public void setTipo(List<Integer> tipo) {
-        this.tipo = tipo;
+    public void setTypes(List<Integer> types) {
+        this.types = types;
     }
 
-    public List<String> getHabilidades() {
-        return habilidades;
+    public List<String> getSkills() {
+        return skills;
     }
 
-    public void setHabilidades(List<String> habilidades) {
-        this.habilidades = habilidades;
+    public void setSkills(List<String> skills) {
+        this.skills = skills;
     }
 
-    public double getPeso() {
-        return peso;
+    public double getWeight() {
+        return weight;
     }
 
-    public void setPeso(double peso) {
-        this.peso = peso;
+    public void setWeight(double weight) {
+        this.weight = weight;
     }
 
-    public String getImagem() {
-        return imagem;
+    public String getImage() {
+        return image;
     }
 
-    public void setImagem(String imagem) {
-        this.imagem = imagem;
+    public void setImage(String image) {
+        this.image = image;
     }
 
 }
