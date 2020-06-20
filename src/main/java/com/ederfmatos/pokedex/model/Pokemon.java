@@ -19,7 +19,7 @@ public class Pokemon {
     private double weight;
     private String image;
 
-    private boolean test = true;
+    private boolean test = false;
 
     public Pokemon() {
     }
