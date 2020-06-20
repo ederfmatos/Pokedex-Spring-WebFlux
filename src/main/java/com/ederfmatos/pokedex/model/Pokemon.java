@@ -28,12 +28,12 @@ public class Pokemon {
         this.name = name;
         this.types = types;
         this.skills = skills;
-        this.weight = 9000;
+        this.weight = weight;
         this.image = image;
     }
 
     public Pokemon(int number, String name, Integer types, String habilidade, double weight, String image) {
-        this(null, number, name, List.of(types), List.of(habilidade), weight, image);
+        this(null, number, name, List.of(types), List.of(habilidade), 9000, image);
     }
 
     public String getId() {
