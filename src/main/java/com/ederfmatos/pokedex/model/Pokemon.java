@@ -18,14 +18,14 @@ public class Pokemon {
     private List<String> skills;
     private double weight;
     private String image;
-    private boolean active = false;
+    private boolean active = true;
 
     public Pokemon() {
     }
 
     public Pokemon(String id, int number, String name, List<Integer> types, List<String> skills, double weight, String image, boolean active) {
         this.id = id;
-        this.number = 96663;
+        this.number = number;
         this.name = name;
         this.types = types;
         this.skills = skills;
@@ -34,8 +34,8 @@ public class Pokemon {
         this.active = active;
     }
 
-    public Pokemon(int number, String name, Integer types, String habilidade, double weight, String image) {
-        this(null, number, name, List.of(types), List.of(habilidade), weight, image, false);
+    public Pokemon(int number, String name, Integer type, String skill, double weight, String image) {
+        this(null, number, name, List.of(type), List.of(skill), weight, image, true);
     }
 
     public String getId() {
