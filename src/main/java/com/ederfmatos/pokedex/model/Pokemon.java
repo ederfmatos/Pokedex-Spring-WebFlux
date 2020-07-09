@@ -16,24 +16,22 @@ public class Pokemon {
     private String name;
     private List<Integer> types;
     private List<String> skills;
-    private double weight;
     private String image;
 
     public Pokemon() {
     }
 
-    public Pokemon(String id, int number, String name, List<Integer> types, List<String> skills, double weight, String image) {
+    public Pokemon(String id, int number, String name, List<Integer> types, List<String> skills, String image) {
         this.id = id;
         this.number = number;
         this.name = name;
         this.types = types;
         this.skills = skills;
-        this.weight = weight;
         this.image = image;
     }
 
-    public Pokemon(int number, String name, Integer type, String skill, double weight, String image) {
-        this(null, number, name, List.of(type), List.of(skill), weight, image);
+    public Pokemon(int number, String name, Integer type, String skill, String image) {
+        this(null, number, name, List.of(type), List.of(skill), image);
     }
 
     public String getId() {
@@ -76,14 +74,6 @@ public class Pokemon {
         this.skills = skills;
     }
 
-    public double getWeight() {
-        return weight;
-    }
-
-    public void setWeight(double weight) {
-        this.weight = weight;
-    }
-
     public String getImage() {
         return image;
     }
@@ -100,7 +90,6 @@ public class Pokemon {
                 ", name='" + name + '\'' +
                 ", types=" + types +
                 ", skills=" + skills +
-                ", weight=" + weight +
                 ", image='" + image + '\'' +
                 '}';
     }

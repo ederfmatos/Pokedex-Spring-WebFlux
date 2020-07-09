@@ -39,7 +39,7 @@ public class PokemonServiceImpl implements PokemonService {
                         .withNumber(pokemon.getNumber())
                         .withTypes(pokemon.getTypes())
                         .withSkills(pokemon.getSkills())
-                        .withWeight(pokemon.getWeight())))
+                        .withImage(pokemon.getImage())))
                 .switchIfEmpty(Mono.error(NotFoundErrorEnum.POKEMON_NAO_ENCONTRADO.getException()));
     }
 
