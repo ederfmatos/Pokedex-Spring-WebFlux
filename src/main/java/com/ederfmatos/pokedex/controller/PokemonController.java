@@ -63,6 +63,7 @@ public class PokemonController {
 
     @DeleteMapping("/{id}")
     @ApiOperation("Delete a pokemon")
+    @ResponseStatus(HttpStatus.NO_CONTENT)
     public Mono<Void> delete(@PathVariable String id) {
         return pokemonService.delete(id);
     }
