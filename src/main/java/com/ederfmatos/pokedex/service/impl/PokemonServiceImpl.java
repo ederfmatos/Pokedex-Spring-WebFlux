@@ -50,8 +50,8 @@ public class PokemonServiceImpl implements PokemonService {
 
     @Override
     public Mono<Void> delete(String id) {
-        return repository.existsById(id)
-                .and((a) -> repository.deleteById(id))
+        return repository.findById(id)
+                .flatMap((a) -> repository.deleteById(id))
                 .switchIfEmpty(Mono.error(NotFoundErrorEnum.POKEMON_NAO_ENCONTRADO.getException()));
     }
 }
