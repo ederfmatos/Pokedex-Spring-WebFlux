@@ -36,6 +36,7 @@ public class PokemonServiceImpl implements PokemonService {
         return repository.findById(id)
                 .flatMap(existingPokemon -> repository.save(existingPokemon
                         .withName(pokemon.getName())
+                        .withNumber(pokemon.getNumber())
                         .withTypes(pokemon.getTypes())
                         .withSkills(pokemon.getSkills())
                         .withWeight(pokemon.getWeight())))
